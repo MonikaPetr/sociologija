@@ -9,7 +9,7 @@ $backgroundYellow: #ffbe08;
     .title {
       margin-top: 100px;
       margin-left: -400px;
-      width: 350px;
+      width: 306px;;
       h1 {
         text-transform: uppercase;
         font-weight: bold;
@@ -61,119 +61,190 @@ $backgroundYellow: #ffbe08;
   }
 }
 .workflow {
-  height: 1260px;
+  min-height: 1260px;
   background-color: $backgroundYellow;
   .offset {
-    margin: auto;
-    overflow: visible;
-    width: 0px;
-    .workflowContent {
-      padding-top: 200px;
-      margin-left: -700px;
-      width: 950px;
-      .row {
-        flex-wrap: wrap;
-      }
-      .col-md-6 {
-        width: auto;
-      }
-      .workflowTime {
-        text-align: right;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-size: 20px;
-      }
-      .workflowActivity {
-        border: 1px solid #fff;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-size: 20px;
-        min-width:100px;
-        flex: 0 0 auto;
-      }
-      .workflowActivityBreak {
-        border-left: 1px solid #fff;
-        height: 20px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-      }
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    .row {
+      flex-wrap: wrap;
+    }
+    .workflowTime {
+      text-align: right;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 20px;
+    }
+    .workflowActivity {
+      border: 1px solid #fff;
+      padding: 10px 10px;
+      font-size: 20px;
+      min-width:100px;
+      display: inline-block;
+    }
+    .workflowActivityBreak {
+      border-left: 1px solid #fff;
+      height: 20px;
+      margin-top: 5px;
+      margin-bottom: 5px;
     }
   }
 }
 .currentEvents {
-  height: 1020px;
+  min-height: 1020px;
+  .offset {
+    margin: auto;
+    overflow: visible;
+    width: 0px;
+    .title {
+      margin-top: 150px;
+      margin-left: -300px;
+      width: 603px;;
+      h1 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 50px;
+      }
+    }
+  }
+  .row {
+    padding-top: 150px;
+    .currentEventsContent {
+      padding-left: 30px;
+      hr {
+        border: 1px solid #4e4d5c;
+      }
+      .currentEventsDate {
+        margin-top: -18px;
+        padding-top: 5px;
+        background: #4e4d5c;
+        color: #fff;
+        width: 30%;
+        text-align: center;
+        hr {
+          border: 1px solid #fff;
+          margin: 0 auto;
+          width: 75%;
+        }
+        h6 {
+          font-size: 22px;
+        }
+        p {
+          font-size: 16px;
+          padding-bottom: 10px;
+        }
+      }
+      .currentEventsTitle {
+        padding-top: 30px;
+        min-height: 100px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
 }
 @media only screen and (max-width: 1200px) {
-  .subCult {
-    margin-left: 0px !important;
+  .events .eventContent .subCult {
+    margin-left: 0px;
+  }
+  .currentEvents .col-md-4 img {
+    width: 99%;
   }
 }
 @media only screen and (max-width: 1000px) {
-  hr {
-    width: 300px !important;
+  .events .eventContent hr {
+    width: 300px;
   }
-  .paraTitle {
-    font-size: 26px !important;
+  .events .eventContent .paraTitle {
+    font-size: 26px;
   }
-  .paraDate {
-    font-size: 14px !important;
+  .events .eventContent .paraDate {
+    font-size: 14px;
   }
-  .paraContent {
-    font-size: 18px !important;
+  .events .eventContent .paraContent {
+    font-size: 18px;
   }
-  tr, td {
-    font-size: 16px !important;
-    padding: 10px 10px !important;
+  .events .eventCalendar table tr, .events .eventCalendar table td {
+    font-size: 16px;
+    padding: 10px 10px;
   }
-  .title {
-    margin-left: -300px !important;
+  .events .offset .title {
+    margin-left: -300px;
+  }
+  .currentEvents .row .currentEventsContent {
+    padding-left: 0px;
+    hr {
+      width: 100%;
+    }
+    h3 {
+      font-size: 22px;
+    }
+    .currentEventsDate {
+      width: 40%;
+      hr {
+        width: 75%;
+      }
+      h6 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+    p {
+      font-size: 16px;
+    }
   }
 }
 @media only screen and (max-width: 780px) {
   .events {
     height: 1200px;
-    .title {
-      margin-left: -150px !important;
+    .offset .title {
+      margin-left: -150px;
     }
     .eventContent {
       margin-top: 80px;
     }
     .eventCalendar {
       margin-top: 40px;
-      tr, td {
-        font-size: 18px !important;
-        padding: 10px 20px !important;
+      table tr, table td {
+        font-size: 18px;
+        padding: 10px 10px;
       }
     }
   }
-  .workflowContent {
-    padding-top: 70px !important;
-    .workflowTime {
-      margin-left: 300px;
-    }
-    .workflowActivity {
-      margin-left: 300px;
-      max-width: 400px;
-    }
-    .workflowActivityBreak {
-      display: none;
-    }
+  .workflow .offset .workflowTime {
+    text-align: left;
   }
-}
-@media only screen and (max-width: 590px) {
-  .workflow .offset .workflowContent .workflowTime {
-    margin-left: 570px;
-    font-size: 16px;
+  .currentEvents .row .currentEventsContent .currentEventsTitle {
+    min-height: 80px;
   }
-  .workflow .offset .workflowContent .workflowActivity {
-    margin-left: 570px;
-    max-width: 280px;
-    font-size: 16px;
+  .currentEvents .row .currentEventsContent .currentEventsDate {
+    width: 25%;
+  }
+  .currentEvents .row .currentEventsContent {
+    margin-bottom: 50px;
+  }
+  .currentEvents .offset .title {
+    text-align: center;
+    width: 255px;
+    margin-left: -130px;
+    h1 {
+      font-size: 44px;
+    }
   }
 }
 @media only screen and (max-width: 500px) {
-  .events .eventCalendar tr, .events .eventCalendar td {
-      font-size: 16px !important;
-      padding: 8px 8px !important;
+  .events .eventCalendar table tr, .events .eventCalendar table td {
+      font-size: 16px;
+      padding: 8px 8px;
+  }
+  .currentEvents .offset .title {
+    width: 230px;
+    h1 {
+      font-size: 40px;
+    }
   }
 }
